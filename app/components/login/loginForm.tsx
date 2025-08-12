@@ -67,9 +67,6 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSuccess, onError }) => {
 
   return (
     <>
-      <h3 className="text-center text-1xl font-bold mb-1 text-red-600">
-        {process.env.NEXT_PUBLIC_AMBIENT}
-      </h3>
       <form
         onSubmit={(e) => {
           e.preventDefault();

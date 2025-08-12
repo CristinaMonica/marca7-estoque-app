@@ -24,14 +24,12 @@ const LoginLayout: React.FC<LoginLayoutProps> = ({ children }) => {
               height={60}
               className="mx-auto"
             />
-            <span className="text-lg font-bold">STOK - Inventário</span>
+            <span className="text-lg font-bold">Marca7 - Estoque</span>
           </div>
           {children}
         </div>
       </div>
-      <footer className="absolute bottom-0 right-0 p-4 text-white">
-        &copy; 2024 Solaris Tecnologia. Todos os direitos reservados.
-      </footer>
+      <footer className="absolute bottom-0 right-0 p-4 text-white"></footer>
     </div>
   );
 };
