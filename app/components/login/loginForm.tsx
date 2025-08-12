@@ -21,7 +21,9 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSuccess, onError }) => {
 
   React.useEffect(() => {
     const handleDocumentCapsLock = (e: KeyboardEvent) => {
-      setCapsLock(e.getModifierState("CapsLock"));
+      if (typeof e.getModifierState === "function") {
+        setCapsLock(e.getModifierState("CapsLock"));
+      }
     };
     document.addEventListener("keydown", handleDocumentCapsLock);
     return () => {
