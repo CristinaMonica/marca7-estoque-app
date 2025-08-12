@@ -15,14 +15,17 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSuccess, onError }) => {
 
   const routeUrl = process.env.NEXT_PUBLIC_ROUTE_URL;
 
-  const handleCapsLock = (e: any) => {
+  const handleCapsLock = (e: React.KeyboardEvent<HTMLInputElement>) => {
     setCapsLock(e.getModifierState("CapsLock"));
   };
 
   React.useEffect(() => {
-    document.addEventListener("keydown", handleCapsLock);
+    const handleDocumentCapsLock = (e: KeyboardEvent) => {
+      setCapsLock(e.getModifierState("CapsLock"));
+    };
+    document.addEventListener("keydown", handleDocumentCapsLock);
     return () => {
-      document.removeEventListener("keydown", handleCapsLock);
+      document.removeEventListener("keydown", handleDocumentCapsLock);
     };
   }, []);
 
@@ -101,6 +104,8 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSuccess, onError }) => {
             type="password"
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
+            onKeyDown={handleCapsLock}
+            onKeyUp={handleCapsLock}
             placeholder="Digite sua senha"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
           />
