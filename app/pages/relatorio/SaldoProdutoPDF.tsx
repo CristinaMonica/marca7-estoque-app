@@ -116,7 +116,7 @@ const SaldoProdutoPDF: React.FC<SaldoProdutoPDFProps> = ({
       {Array.from({ length: pages }).map((_, pageIndex) => (
         <Page style={styles.page} key={pageIndex} size="A4">
           <View style={styles.header}>
-            <Text style={styles.title}>STOK - Inventário</Text>
+            <Text style={styles.title}>Marca7 - Estoque</Text>
             <Text style={styles.headerText}>
               Relatório de Saldo de Produtos
             </Text>
