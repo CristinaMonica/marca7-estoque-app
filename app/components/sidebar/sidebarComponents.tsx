@@ -41,7 +41,7 @@ const Sidebar: React.FC = () => {
     <div className="h-screen bg-gray-800 text-white" style={{ width: "15%" }}>
       <div className="p-4 ml-4 flex items-center">
         <img src="/images/icon.png" alt="Logo" className="w-11 h-11 mr-2" />
-        <span className="text-lg font-bold">STOK - Inventário</span>
+        <span className="text-lg font-bold">Marca7 - Estoque</span>
       </div>
       <hr className="mt-4 border-gray-300 w-full" />
       <ul className="mt-2">
